@@ -3,23 +3,19 @@
 - ubuntu 22.04
 - dev machine version `0.1.0`
 
-## build
+## build and deploy
 
 ```bash
-docker build -t ghcr.io/falcon-infra/dev .
+docker buildx build --platform linux/amd64,linux/arm64 \
+    -t ghcr.io/falcon-infra/dev:latest \
+    -t ghcr.io/falcon-infra/dev:v0.1.0 \
+    . --push
 ```
 
 ## test
 
 ```bash
 docker run -it --rm -v `pwd`/..:/root/code ghcr.io/falcon-infra/dev /bin/zsh
-```
-
-## deploy
-
-```
-docker tag ghcr.io/falcon-infra/dev ghcr.io/falcon-infra/dev:0.1.0
-docker push ghcr.io/falcon-infra/dev:0.1.0
 ```
 
 ## run
