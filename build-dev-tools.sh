@@ -14,7 +14,7 @@ cd && wget https://github.com/Kitware/CMake/archive/refs/tags/$CMAKE_VERSION.tar
 tar zxvf $CMAKE_TARGZ
 cd $CMAKE_HOME || exit
 ./bootstrap --parallel=64
-make -j && make install
+make -j10 && make install
 
 # ninja
 cd && git clone https://github.com/ninja-build/ninja.git && cd ninja || exit
