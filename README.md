@@ -10,8 +10,17 @@
 
 ## build and deploy
 
+linux/amd64
 ```bash
-docker buildx build --platform linux/amd64,linux/arm64 \
+docker buildx build --platform linux/amd64 \
+    -t ghcr.io/falcon-infra/dev:latest \
+    -t ghcr.io/falcon-infra/dev:v0.1.0 \
+    . --push
+```
+
+linux/arm64
+```bash
+docker buildx build --platform linux/arm64 \
     -t ghcr.io/falcon-infra/dev:latest \
     -t ghcr.io/falcon-infra/dev:v0.1.0 \
     . --push
