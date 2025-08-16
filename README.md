@@ -3,6 +3,11 @@
 - ubuntu 22.04
 - dev machine version `0.1.0`
 
+## use Buildx
+   ```bash
+   docker buildx create --use
+   ```
+
 ## build and deploy
 
 ```bash
