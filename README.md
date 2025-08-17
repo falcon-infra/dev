@@ -23,6 +23,7 @@ docker buildx build --platform linux/amd64,linux/arm64 \
     -t ghcr.io/falcon-infra/dev:v0.1.0-ubuntu22.04 \
     -t ghcr.io/falcon-infra/dev:ubuntu22.04 \
     -t ghcr.io/falcon-infra/dev:latest \  # Only after testing!
+    -f ubuntu22.04-dockerfile \
     . --push
 ```
 ubuntu24.04
@@ -30,6 +31,7 @@ ubuntu24.04
 docker buildx build --platform linux/amd64,linux/arm64 \
     -t ghcr.io/falcon-infra/dev:v0.2.0-ubuntu24.04 \
     -t ghcr.io/falcon-infra/dev:ubuntu24.04 \
+    -f ubuntu24.04-dockerfile \
     . --push
    ```
 

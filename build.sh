@@ -3,7 +3,7 @@ set -euo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 
-GCC_VERSION=13
+GCC_VERSION=${GCC_VERSION:-13}
 CLANG_VERSION=19
 
 # base
