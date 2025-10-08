@@ -44,7 +44,7 @@ docker run -it --rm -v `pwd`/..:/root/code ghcr.io/falcon-infra/dev /bin/zsh
 ## run
 
 ```bash
-docker run --privileged -d -it --name angel -v `pwd`:/root/code -w /root/code ghcr.io/falcon-infra/dev:0.1.0
+docker run --privileged -d -it --name angel -v `pwd`:/root/code -w /root/code ghcr.io/falcon-infra/dev:ubuntu24.04
 docker exec -it --detach-keys="ctrl-z,z" angel /bin/zsh
 git config --global user.name $your_name
 git config --global user.email $your_email
